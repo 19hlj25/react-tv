@@ -5,7 +5,7 @@ import EpisodeDetails from "../episodes/EpisodeDetails";
 
 /** Allows users to browse through the episodes of the given show */
 export default function ShowDetails({ showpick }) {
-  const [selectedEpisodes, setselectedEpisodes] = useState(null);
+  const [selectedEpisode, setselectedEpisode] = useState(null);
   if (!showpick) {
     return (
       <div>
@@ -18,11 +18,11 @@ export default function ShowDetails({ showpick }) {
     <div className="show-details">
       <EpisodeList
         name={showpick.name}
-        episode={showpick.episodes}
-        selectedEpisodes={selectedEpisodes}
-        setselectedEpisodes={setselectedEpisodes}
+        episodes={showpick.episodes}
+        selectedEpisode={selectedEpisode}
+        setselectedEpisode={setselectedEpisode}
       />
-      <EpisodeDetails selectedEpisodes={selectedEpisodes} />
+      <EpisodeDetails episode={selectedEpisode} />
     </div>
   );
 }

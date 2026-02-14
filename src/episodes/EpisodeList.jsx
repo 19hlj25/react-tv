@@ -5,7 +5,7 @@ export default function EpisodeList({
   name,
   episodes,
   selectedEpisode,
-  setSelectedEpisode,
+  setselectedEpisode,
 }) {
   return (
     <section className="episodes">
@@ -14,7 +14,7 @@ export default function EpisodeList({
         {episodes.map((episode) => (
           <li
             key={episode.number}
-            onClick={() => setSelectedEpisode(episode)}
+            onClick={() => setselectedEpisode(episode)}
             className={episode === selectedEpisode ? "selected" : ""}
           >
             {episode.title}
