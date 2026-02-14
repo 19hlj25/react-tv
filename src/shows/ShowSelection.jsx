@@ -13,7 +13,7 @@ export default function ShowSelection({ showsData, setShowpick }) {
             setShowpick(shows);
           }}
         >
-          {showsData.name}
+          {shows.name}
         </a>
       ))}
     </nav>
